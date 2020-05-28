@@ -8,17 +8,25 @@ function SignIn() {
 
 
     return (
-        <View style={{ flex: 1,  backgroundColor: "#FF5A5D", justifyContent: "center", alignItems: "center" }}>
-            <Text>Fourneaux&Cie</Text>
+        <View style={{backgroundColor: "#FF5A5D", flex: 1}}>
+            <View style={{height: 50, backgroundColor: "black", opacity: 0.5}}>
 
-            <Input placeholderTextColor="#ADADAD" placeholder="Email" inputContainerStyle={styles.input} />
-            <Input placeholderTextColor="#ADADAD" placeholder="Mot de passe" inputContainerStyle={styles.input} />
+            </View>
+            <View style={{ flex: 1 , justifyContent: "center", alignItems: "center" }}>
+                <Text style={{color:"white", fontSize: 60}}>Fourneaux</Text> 
+                <Text style={{color:"white", fontSize: 60, marginBottom: 50}}>&Cie</Text>
 
-            <Button title="Se connecter" type="solid" containerStyle={{padding: 20}} buttonStyle={styles.button} />
+                <Input placeholderTextColor="#ADADAD" placeholder="Email" inputContainerStyle={styles.input} />
+                <Input placeholderTextColor="#ADADAD" placeholder="Mot de passe" inputContainerStyle={styles.input} />
 
-            <Text>Pas encore inscrit? Crééz votre compte</Text>
+                <Button title="Se connecter" type="solid" containerStyle={{ padding: 20 }} buttonStyle={styles.button} />
+            </View>
+
+            <View>
+                <Text style={{alignSelf: "center", marginBottom: 30, color: "white"}}>Pas encore inscrits ? <Text style={{textDecorationLine: "underline"}}>Créez votre compte !</Text></Text>
+            </View>
+
         </View>
-
     )
 }
 
@@ -31,10 +39,11 @@ const styles = StyleSheet.create({
         paddingHorizontal: 20
     },
     button: {
-        backgroundColor: "#FFC830", 
-        borderRadius: 150, 
+        backgroundColor: "#FFC830",
+        borderRadius: 150,
         paddingHorizontal: 30
     },
+
 
 });
 
