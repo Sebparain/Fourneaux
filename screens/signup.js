@@ -2,9 +2,7 @@ import React from 'react'
 import { Text, View, StyleSheet } from 'react-native';
 import { Input, Button } from 'react-native-elements';
 
-
-
-function SignIn({navigation}) {
+function SignUp() {
 
 
     return (
@@ -17,13 +15,14 @@ function SignIn({navigation}) {
                 <Text style={{ color: "white", fontSize: 60 }}>Fourneaux</Text>
                 <Text style={{ color: "white", fontSize: 60, marginBottom: 50 }}>&Cie</Text>
 
+                <Input placeholderTextColor="#ADADAD" placeholder="Prénom" inputContainerStyle={styles.input} />
                 <Input placeholderTextColor="#ADADAD" placeholder="Email" inputContainerStyle={styles.input} />
                 <Input placeholderTextColor="#ADADAD" placeholder="Mot de passe" inputContainerStyle={styles.input} />
 
-                <Button title="Se connecter" type="solid" containerStyle={{ padding: 20 }} buttonStyle={styles.button} />
+                <Button title="S'enregistrer'" type="solid" containerStyle={{ padding: 20 }} buttonStyle={styles.button} />
+            
+                <Text>© Fourneaux&Cie 2020</Text>
             </View>
-
-            <Text style={{ alignSelf: "center", marginBottom: 30, color: "white" }}>Pas encore inscrits ? <Text style={{ textDecorationLine: "underline" }} onPress={() => navigation.navigate('SignUp')}>Créez votre compte !</Text></Text>
         
         </View>
     )
@@ -50,4 +49,4 @@ const styles = StyleSheet.create({
 });
 
 
-export default SignIn
+export default SignUp
